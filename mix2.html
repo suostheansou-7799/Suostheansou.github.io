@@ -338,11 +338,18 @@
             font-size: 0.9em;
         }
 
-        /* ------------------------------------------- */
+    /* ------------------------------------------- */
 /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
 /* ------------------------------------------- */
-@media (max-width: 768px) {
-    /* 1. HOME SECTION: Adjust text size and padding */
+
+/* 1. ផ្លាស់ប្តូរចំណុចចាប់ផ្ដើម Media Query ពី 768px ទៅ 480px វិញ */
+/* នេះមានន័យថា រាល់ការកំណត់ទំហំធំៗ (Laptop/Desktop) នឹងនៅតែប្រើដដែល
+   រហូតទាល់តែអេក្រង់តូចជាង 480px (ទូរស័ព្ទតូចៗបំផុត) ទើបវាប្តូរទៅជា Mobile View ។
+   ចំណុចនេះជួយឲ្យទូរស័ព្ទទំនើបៗ (iPhone Plus, Android Large) បង្ហាញដូច Laptop។
+*/
+@media (max-width: 480px) { 
+
+    /* HOME SECTION: Adjust text size and padding */
     .home h1 {
         font-size: 2.2em;
     }
@@ -353,23 +360,23 @@
 
     .home p {
         font-size: 0.95em;
-        padding: 0 15px; /* Add horizontal padding for small screens */
+        padding: 0 15px; 
     }
 
-    /* 2. MAIN BUTTONS: Stack buttons for easy tapping */
+    /* MAIN BUTTONS: ត្រូវតែកែប្រែ flex-direction ឡើងវិញនៅត្រឹម 480px*/
     .btns {
-        flex-direction: column;
+        flex-direction: column; /* តម្រៀបបញ្ឈរវិញសម្រាប់ទូរស័ព្ទតូច */
         gap: 10px;
     }
 
     .btns a {
         padding: 10px 25px;
         font-size: 0.9em;
-        width: 80%; /* Make buttons wider */
+        width: 80%; 
         max-width: 300px;
     }
-
-    /* 3. SOCIAL LINKS: Ensure small buttons wrap neatly */
+    
+    /* SOCIAL LINKS: Ensure small buttons wrap neatly */
     .social {
         gap: 8px;
         padding: 0 10px;
@@ -379,14 +386,14 @@
         padding: 8px 10px;
         font-size: 0.8em;
         text-align: center;
-        flex-grow: 1; /* Allow them to fill space better */
+        flex-grow: 1; 
     }
 
-    /* 4. CV SECTIONS: Adjust container size and padding */
+    /* CV SECTIONS: Adjust container size and padding */
     .cv-part {
         margin: 30px 15px;
         padding: 30px 25px;
-        min-height: auto; /* Allow height to shrink on mobile */
+        min-height: auto; 
     }
 
     .cv-part h2 {
@@ -395,7 +402,7 @@
         gap: 10px;
     }
 
-    /* 5. LANGUAGE BARS: Ensure alignment is maintained */
+    /* LANGUAGE BARS: Ensure alignment is maintained */
     .language-item {
         flex-direction: column;
         align-items: flex-start;
@@ -409,6 +416,43 @@
     .skill-bar {
         margin-left: 0;
         width: 100%;
+    }
+}
+
+/* 2. បន្ថែម Media Query ថ្មីសម្រាប់ Tablet/Large Phone (768px - 481px) */
+/* ការកំណត់នេះនឹងអនុញ្ញាតឲ្យប៊ូតុងតម្រៀបជួរដេក (Laptop Style) ដូចដែលអ្នកចង់បាន */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* រាល់ធាតុទាំងអស់នឹងប្រើការកំណត់ដើម (Laptop/Desktop) */
+
+    /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង និង social links */
+    .btns {
+        flex-direction: row; /* បង្ហាញតាមជួរដេក (Laptop View) */
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .btns a {
+        /* កែទំហំដើម្បីកុំឲ្យធំពេក */
+        padding: 10px 25px;
+        font-size: 0.9em;
+        max-width: 250px;
+    }
+    
+    .social {
+        gap: 10px;
+        padding: 0 10px;
+        flex-wrap: wrap; 
+    }
+    
+    .social a {
+        font-size: 0.8em;
+    }
+
+    .cv-part {
+        /* គម្លាតតូចជាង Desktop បន្តិច */
+        margin: 30px auto;
+        padding: 30px;
+        max-width: 750px; 
     }
 }
     
