@@ -334,11 +334,13 @@
             font-size: 0.9em;
         }
         /* ------------------------------------------- */
-        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS (កូដថ្មី) 🌟 */
+        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
         /* ------------------------------------------- */
+        /* កែសម្រួលសម្រាប់ទូរស័ព្ទតូចបំផុត (max-width: 480px) */
         
         @media (max-width: 480px) {
             /* HOME SECTION: Adjust text size and padding */
+            /* ... រក្សា​កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
             .home h1 {
                 font-size: 2.2em;
             }
@@ -349,30 +351,35 @@
                 font-size: 0.95em;
                 padding: 0 15px;
             }
-            /* MAIN BUTTONS: ត្រូវតែកែប្រែ flex-direction ឡើងវិញនៅត្រឹម 480px*/
+            /* 🌟 ការកែសម្រួលសំខាន់សម្រាប់ MAIN BUTTONS 🌟 */
             .btns {
-                flex-direction: column;
-                /* តម្រៀបបញ្ឈរវិញសម្រាប់ទូរស័ព្ទតូច */
-                gap: 10px;
+                flex-direction: row;
+                /* ផ្លាស់ប្តូរពី column ទៅ row វិញ */
+                flex-wrap: wrap;
+                /* អនុញ្ញាតឲ្យប៊ូតុងចុះបន្ទាត់បើវាមិនអាចនៅជាមួយគ្នាបាន */
+                gap: 8px;
+                /* កាត់បន្ថយគម្លាត */
+                padding: 0 10px;
+                align-items: center;
             }
             .btns a {
-                padding: 10px 25px;
-                font-size: 0.9em;
-                width: 80%;
-                max-width: 300px;
+                padding: 8px 10px;
+                /* កាត់បន្ថយ padding ដើម្បីឲ្យសមក្នុងជួរ */
+                font-size: 0.8em;
+                /* កាត់បន្ថយទំហំអក្សរ */
+                width: auto;
+                /* ឲ្យទទឹង​វាស់​តាម​ខ្លឹមសារ */
+                max-width: none;
+                flex-grow: 1;
+                /* ឲ្យ​ប៊ូតុង​ព្យាយាម​ចែក​ទទឹង​ស្មើគ្នា */
             }
+            /* ... រក្សា​កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
             /* SOCIAL LINKS: Ensure small buttons wrap neatly */
             .social {
                 gap: 8px;
                 padding: 0 10px;
             }
-            .social a {
-                padding: 8px 10px;
-                font-size: 0.8em;
-                text-align: center;
-                flex-grow: 1;
-            }
-            /* CV SECTIONS: Adjust container size and padding */
+            /* ... កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
             .cv-part {
                 margin: 30px 15px;
                 padding: 30px 25px;
@@ -383,7 +390,6 @@
                 margin-bottom: 20px;
                 gap: 10px;
             }
-            /* LANGUAGE BARS: Ensure alignment is maintained */
             .language-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -397,44 +403,24 @@
                 width: 100%;
             }
         }
-        /* 2. Media Query ថ្មីសម្រាប់ Tablet/Large Phone (481px - 768px) */
+        /* 2. Media Query សម្រាប់ Tablet/Large Phone (481px - 768px) */
+        /* រក្សាកូដនេះដដែល ព្រោះវាបានកំណត់ជាជួរដេក (row) រួចហើយ */
         
         @media (min-width: 481px) and (max-width: 768px) {
-            /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង (Buttons) */
+            /* ... រក្សា​កូដ​ដូច​ដើម ... */
             .btns {
                 flex-direction: row;
-                /* បង្ហាញតាមជួរដេក (Laptop View) */
                 flex-wrap: nowrap;
-                /* មិន​ឲ្យ​ប៊ូតុង​ចុះ​បន្ទាត់​ទេ (តម្រូវ​ឲ្យ​នៅ​បន្ទាត់​តែមួយ) */
                 gap: 8px;
-                /* កាត់បន្ថយគម្លាតបន្តិច */
                 padding: 0 10px;
             }
             .btns a {
-                /* កែទំហំដើម្បីកុំឲ្យធំពេក */
                 padding: 8px 15px;
-                /* កាត់បន្ថយ padding */
                 font-size: 0.85em;
-                /* កាត់បន្ថយទំហំអក្សរ */
                 max-width: none;
-                /* អនុញ្ញាតឲ្យទទឹង​ត្រូវ​បាន​កំណត់​ដោយ flex-grow */
                 flex-grow: 1;
-                /* ឲ្យ​ប៊ូតុង​ទាំង 3 ចែកចាយ​ទទឹង​ស្មើគ្នា */
             }
-            /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
-            .social {
-                gap: 10px;
-                padding: 0 10px;
-                flex-wrap: wrap;
-            }
-            .social a {
-                font-size: 0.8em;
-            }
-            .cv-part {
-                margin: 30px auto;
-                padding: 30px;
-                max-width: 750px;
-            }
+            /* ... កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
         }
     </style>
 </head>
