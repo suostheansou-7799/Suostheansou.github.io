@@ -27,7 +27,8 @@
         .home {
             height: 100vh;
             /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
-            background: url('background.jpg') no-repeat center center/cover;
+            /* ខ្ញុំប្រើពណ៌ខៀវដូចក្នុងរូបភាពរបស់អ្នកសម្រាប់ការមើលងាយ */
+            background: #2563eb url('background.jpg') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -51,9 +52,11 @@
             -webkit-backdrop-filter: blur(15px);
             z-index: -1;
         }
+        /* 🌟 កូដដែលបានកែសម្រួលសម្រាប់ទំហំ Profile និង Margin Top/Bottom 🌟 */
         
         .home img {
             width: 150px;
+            /* កាត់បន្ថយទំហំពី 180px មក 150px */
             height: 150px;
             border-radius: 50%;
             border: 3px solid #fff;
@@ -62,6 +65,8 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
             position: relative;
             z-index: 2;
+            margin-top: 5vh;
+            /* ទម្លាក់ Profile ចុះក្រោមបន្តិច */
         }
         
         .home h1 {
@@ -192,21 +197,18 @@
             font-size: 1.1em;
             color: #1f2937;
         }
-        /* 🌟 SCROLL ANIMATION CSS (សំខាន់) 🌟 */
+        /* 🌟 SCROLL ANIMATION CSS 🌟 */
         
         .hidden {
             opacity: 0;
             transform: translateY(50px);
-            /* ចាប់ផ្តើមពីខាងក្រោមបន្តិច */
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            /* ល្បឿនលេចចេញ */
         }
         
         .show {
             opacity: 1;
             transform: translateY(0);
         }
-        /* បញ្ចប់ SCROLL ANIMATION CSS */
         /* General content styling */
         
         p {
@@ -332,7 +334,7 @@
             font-size: 0.9em;
         }
         /* ------------------------------------------- */
-        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
+        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS (កូដថ្មី) 🌟 */
         /* ------------------------------------------- */
         
         @media (max-width: 480px) {
@@ -400,7 +402,6 @@
         @media (min-width: 481px) and (max-width: 768px) {
             /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង (Buttons) */
             .btns {
-                /* 🌟 កែសម្រួលចំណុចនេះ 🌟 */
                 flex-direction: row;
                 /* បង្ហាញតាមជួរដេក (Laptop View) */
                 flex-wrap: nowrap;
@@ -436,7 +437,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
