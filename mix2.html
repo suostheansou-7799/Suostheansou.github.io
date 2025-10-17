@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -437,65 +437,52 @@
                 padding: 0 10px;
             }
             .btns a {
-                text-decoration: none;
-                background: #facc15;
-                color: #1f2937;
-                padding: 12px 35px;
-                border-radius: 30px;
-                font-weight: bold;
-                transition: 0.3s;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                /* 🌟 កូដដែលបានកែសម្រួលដើម្បីតម្រូវចំកណ្តាល 🌟 */
+                /* កែទំហំដើម្បីកុំឲ្យធំពេក */
+                padding: 8px 15px;
+                /* កាត់បន្ថយ padding */
+                font-size: 0.85em;
+                /* កាត់បន្ថយទំហំអក្សរ */
+                max-width: none;
+                /* អនុញ្ញាតឲ្យទទឹង​ត្រូវ​បាន​កំណត់​ដោយ flex-grow */
+                flex-grow: 1;
+                /* ឲ្យ​ប៊ូតុង​ទាំង 3 ចែកចាយ​ទទឹង​ស្មើគ្នា */
+            }
+            /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបពីរជួរ) 🌟 */
+            .contact-links {
                 display: flex;
+                /* ប្រើ flex ដើម្បីគ្រប់គ្រងប៊ូតុង */
+                flex-wrap: wrap;
                 justify-content: center;
-                /* តម្រូវអក្សរចំកណ្តាលផ្ដេក */
-                align-items: center;
-                /* តម្រូវអក្សរចំកណ្តាលបញ្ឈរ */
-                /* ------------------------------------------- */
-                gap: 8px;
+                gap: 10px;
+                /* គម្លាតរវាងប៊ូតុង */
+            }
+            .contact-links a {
+                padding: 8px 15px;
+                /* កាត់បន្ថយ padding */
+                font-size: 0.85em;
+                /* កាត់បន្ថយទំហំអក្សរ */
+                margin: 0;
+                /* លុប margin ចាស់ចោល */
+                flex-grow: 1;
+                /* ឲ្យប៊ូតុងចែកគ្នាស្មើៗគ្នា */
+                max-width: 45%;
+                /* កំណត់ទទឹងអតិបរមាដើម្បីឲ្យវានៅពីរជួរបាន */
+            }
+            /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
+            .social {
+                gap: 10px;
+                padding: 0 10px;
+                flex-wrap: wrap;
+            }
+            .social a {
+                font-size: 0.8em;
+            }
+            .cv-part {
+                margin: 30px auto;
+                padding: 30px;
+                max-width: 750px;
             }
         }
-        /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបពីរជួរ) 🌟 */
-        
-        .contact-links {
-            display: flex;
-            /* ប្រើ flex ដើម្បីគ្រប់គ្រងប៊ូតុង */
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            /* គម្លាតរវាងប៊ូតុង */
-        }
-        
-        .contact-links a {
-            padding: 8px 15px;
-            /* កាត់បន្ថយ padding */
-            font-size: 0.85em;
-            /* កាត់បន្ថយទំហំអក្សរ */
-            margin: 0;
-            /* លុប margin ចាស់ចោល */
-            flex-grow: 1;
-            /* ឲ្យប៊ូតុងចែកគ្នាស្មើៗគ្នា */
-            max-width: 45%;
-            /* កំណត់ទទឹងអតិបរមាដើម្បីឲ្យវានៅពីរជួរបាន */
-        }
-        /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
-        
-        .social {
-            gap: 10px;
-            padding: 0 10px;
-            flex-wrap: wrap;
-        }
-        
-        .social a {
-            font-size: 0.8em;
-        }
-        
-        .cv-part {
-            margin: 30px auto;
-            padding: 30px;
-            max-width: 750px;
-        }
-    }
     </style>
 </head>
 
@@ -654,7 +641,7 @@
 
             <a href="tel:+85570605799"> Call: +855 70 605 799</a>
             <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
-            <a href="https://t.me/070605799" target="_blank"> Telegram</a>
+            <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
         </div>
     </section>
 
