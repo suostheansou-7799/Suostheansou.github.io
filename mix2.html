@@ -27,7 +27,6 @@
         .home {
             height: 100vh;
             /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
-            /* ខ្ញុំប្រើពណ៌ខៀវដូចក្នុងរូបភាពរបស់អ្នកសម្រាប់ការមើលងាយ */
             background: #2563eb url('background.jpg') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
@@ -305,6 +304,7 @@
         .contact-section h2 i {
             color: #facc15;
         }
+        /* 🌟 កូដដែលបានកែសម្រួលសម្រាប់ Contact Links (Alignment) 🌟 */
         
         .contact-links a {
             text-decoration: none;
@@ -313,7 +313,12 @@
             padding: 12px 30px;
             border-radius: 25px;
             margin: 10px;
-            display: inline-block;
+            display: inline-flex;
+            /* កែពី inline-block ទៅ inline-flex */
+            justify-content: center;
+            /* ដាក់អក្សរចំកណ្តាលផ្ដេក */
+            align-items: center;
+            /* ដាក់អក្សរចំកណ្តាលបញ្ឈរ */
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5px);
@@ -336,11 +341,10 @@
         /* ------------------------------------------- */
         /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
         /* ------------------------------------------- */
-        /* កែសម្រួលសម្រាប់ទូរស័ព្ទតូចបំផុត (max-width: 480px) */
+        /* 1. កែសម្រួលសម្រាប់ទូរស័ព្ទតូចបំផុត (max-width: 480px) */
         
         @media (max-width: 480px) {
             /* HOME SECTION: Adjust text size and padding */
-            /* ... រក្សា​កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
             .home h1 {
                 font-size: 2.2em;
             }
@@ -351,7 +355,7 @@
                 font-size: 0.95em;
                 padding: 0 15px;
             }
-            /* 🌟 ការកែសម្រួលសំខាន់សម្រាប់ MAIN BUTTONS 🌟 */
+            /* 🌟 កែសម្រួលសំខាន់សម្រាប់ MAIN BUTTONS (តម្រៀបជួរដេក) 🌟 */
             .btns {
                 flex-direction: row;
                 /* ផ្លាស់ប្តូរពី column ទៅ row វិញ */
@@ -373,13 +377,28 @@
                 flex-grow: 1;
                 /* ឲ្យ​ប៊ូតុង​ព្យាយាម​ចែក​ទទឹង​ស្មើគ្នា */
             }
-            /* ... រក្សា​កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
             /* SOCIAL LINKS: Ensure small buttons wrap neatly */
             .social {
                 gap: 8px;
                 padding: 0 10px;
             }
-            /* ... កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
+            /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបបញ្ឈរ) 🌟 */
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                /* តម្រៀបបញ្ឈរសម្រាប់ទូរស័ព្ទតូច */
+                align-items: center;
+                gap: 8px;
+            }
+            .contact-links a {
+                padding: 10px 20px;
+                font-size: 0.9em;
+                width: 85%;
+                /* ទទឹងកាន់តែធំល្មម */
+                max-width: 300px;
+                margin: 0;
+            }
+            /* CV SECTIONS: Adjust container size and padding */
             .cv-part {
                 margin: 30px 15px;
                 padding: 30px 25px;
@@ -390,6 +409,7 @@
                 margin-bottom: 20px;
                 gap: 10px;
             }
+            /* LANGUAGE BARS: Ensure alignment is maintained */
             .language-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -404,23 +424,64 @@
             }
         }
         /* 2. Media Query សម្រាប់ Tablet/Large Phone (481px - 768px) */
-        /* រក្សាកូដនេះដដែល ព្រោះវាបានកំណត់ជាជួរដេក (row) រួចហើយ */
         
         @media (min-width: 481px) and (max-width: 768px) {
-            /* ... រក្សា​កូដ​ដូច​ដើម ... */
+            /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង (Buttons) */
             .btns {
                 flex-direction: row;
+                /* បង្ហាញតាមជួរដេក (Laptop View) */
                 flex-wrap: nowrap;
+                /* មិន​ឲ្យ​ប៊ូតុង​ចុះ​បន្ទាត់​ទេ (តម្រូវ​ឲ្យ​នៅ​បន្ទាត់​តែមួយ) */
                 gap: 8px;
+                /* កាត់បន្ថយគម្លាតបន្តិច */
                 padding: 0 10px;
             }
             .btns a {
+                /* កែទំហំដើម្បីកុំឲ្យធំពេក */
                 padding: 8px 15px;
+                /* កាត់បន្ថយ padding */
                 font-size: 0.85em;
+                /* កាត់បន្ថយទំហំអក្សរ */
                 max-width: none;
+                /* អនុញ្ញាតឲ្យទទឹង​ត្រូវ​បាន​កំណត់​ដោយ flex-grow */
                 flex-grow: 1;
+                /* ឲ្យ​ប៊ូតុង​ទាំង 3 ចែកចាយ​ទទឹង​ស្មើគ្នា */
             }
-            /* ... កូដ​ផ្សេងទៀត​ដូច​ដើម ... */
+            /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបពីរជួរ) 🌟 */
+            .contact-links {
+                display: flex;
+                /* ប្រើ flex ដើម្បីគ្រប់គ្រងប៊ូតុង */
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                /* គម្លាតរវាងប៊ូតុង */
+            }
+            .contact-links a {
+                padding: 8px 15px;
+                /* កាត់បន្ថយ padding */
+                font-size: 0.85em;
+                /* កាត់បន្ថយទំហំអក្សរ */
+                margin: 0;
+                /* លុប margin ចាស់ចោល */
+                flex-grow: 1;
+                /* ឲ្យប៊ូតុងចែកគ្នាស្មើៗគ្នា */
+                max-width: 45%;
+                /* កំណត់ទទឹងអតិបរមាដើម្បីឲ្យវានៅពីរជួរបាន */
+            }
+            /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
+            .social {
+                gap: 10px;
+                padding: 0 10px;
+                flex-wrap: wrap;
+            }
+            .social a {
+                font-size: 0.8em;
+            }
+            .cv-part {
+                margin: 30px auto;
+                padding: 30px;
+                max-width: 750px;
+            }
         }
     </style>
 </head>
@@ -580,7 +641,7 @@
 
             <a href="tel:+85570605799"> Call: +855 70 605 799</a>
             <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
-            <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
+            <a href="https://t.me/070605799" target="_blank"> Telegram</a>
         </div>
     </section>
 
