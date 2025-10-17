@@ -16,19 +16,18 @@
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             color: #222;
             background: #f2f4f8;
         }
-
         /* SECTION 1 - HOME (Full Glass Effect) */
-
+        
         .home {
             height: 100vh;
             /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
-            background: url('background.jpg') no-repeat center center/cover; 
+            background: url('background.jpg') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -38,9 +37,8 @@
             text-align: center;
             z-index: 1;
         }
-
         /* Full-page liquid glass effect (::before) */
-
+        
         .home::before {
             content: '';
             position: absolute;
@@ -53,10 +51,10 @@
             -webkit-backdrop-filter: blur(15px);
             z-index: -1;
         }
-
+        
         .home img {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid #fff;
             object-fit: cover;
@@ -65,7 +63,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .home h1 {
             font-size: 2.8em;
             font-weight: 700;
@@ -74,7 +72,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .home h3 {
             font-size: 1.2em;
             color: #e0e0e0;
@@ -82,7 +80,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .home p {
             margin-top: 15px;
             font-size: 1.05em;
@@ -91,7 +89,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .btns {
             margin-top: 25px;
             display: flex;
@@ -101,7 +99,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .btns a {
             text-decoration: none;
             background: #facc15;
@@ -115,13 +113,13 @@
             align-items: center;
             gap: 8px;
         }
-
+        
         .btns a:hover {
             background: #e0a800;
             color: #1f2937;
             transform: translateY(-2px);
         }
-
+        
         .social {
             margin-top: 35px;
             display: flex;
@@ -131,7 +129,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .social a {
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
@@ -147,27 +145,26 @@
             gap: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
+        
         .social a i {
             font-size: 1.1em;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
-
+        
         .social a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-
         /* NEW CV SECTION STYLING (Part-by-Part Pop-up) */
-
+        
         #cv {
             background: #f2f4f8;
             padding-top: 30px;
             padding-bottom: 30px;
         }
-
+        
         .cv-part {
             max-width: 900px;
             min-height: 250px;
@@ -178,7 +175,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-
+        
         .cv-part h2 {
             font-size: 2.2em;
             color: #1f2937;
@@ -190,63 +187,63 @@
             padding-bottom: 5px;
             gap: 15px;
         }
-
+        
         .cv-part h2 i {
             font-size: 1.1em;
             color: #1f2937;
         }
-        
         /* 🌟 SCROLL ANIMATION CSS (សំខាន់) 🌟 */
+        
         .hidden {
             opacity: 0;
-            transform: translateY(50px); /* ចាប់ផ្តើមពីខាងក្រោមបន្តិច */
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* ល្បឿនលេចចេញ */
+            transform: translateY(50px);
+            /* ចាប់ផ្តើមពីខាងក្រោមបន្តិច */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            /* ល្បឿនលេចចេញ */
         }
-
+        
         .show {
             opacity: 1;
             transform: translateY(0);
         }
         /* បញ្ចប់ SCROLL ANIMATION CSS */
-        
         /* General content styling */
-
+        
         p {
             line-height: 1.7;
             margin-bottom: 15px;
         }
-
+        
         ul {
             list-style: none;
             padding-left: 0;
         }
-
+        
         ul li::before {
             content: "▶ ";
             color: #facc15;
             font-weight: bold;
             margin-right: 5px;
         }
-
+        
         .cv-part ul li {
             margin-bottom: 10px;
             font-size: 0.95em;
         }
-
         /* Language Skill bars */
-
+        
         .language-item {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-
+        
         .language-item strong {
             width: 150px;
             flex-shrink: 0;
             font-weight: 600;
         }
-
+        
         .skill-bar {
             flex-grow: 1;
             height: 10px;
@@ -255,15 +252,14 @@
             overflow: hidden;
             margin-left: 10px;
         }
-
+        
         .skill-level {
             height: 100%;
             background: #facc15;
             border-radius: 5px;
         }
-
         /* Work and Education styling */
-
+        
         .work-details,
         .education-details {
             margin-bottom: 30px;
@@ -272,7 +268,7 @@
             background: #f9fafb;
             border-radius: 5px;
         }
-
+        
         .work-details p strong,
         .education-details p strong {
             display: block;
@@ -280,35 +276,34 @@
             font-size: 1.1em;
             margin-bottom: 5px;
         }
-
+        
         .work-details ul {
             list-style-type: disc;
             padding-left: 20px;
             margin-top: 10px;
         }
-
+        
         .work-details ul li::before {
             content: none;
         }
-
         /* SECTION 3 - CONTACT */
-
+        
         .contact-section {
             background: #1f2937;
             text-align: center;
             padding: 60px 20px;
         }
-
+        
         .contact-section h2 {
             font-size: 2em;
             color: #ffffff;
             margin-bottom: 20px;
         }
-
+        
         .contact-section h2 i {
             color: #facc15;
         }
-
+        
         .contact-links a {
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
@@ -321,15 +316,14 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5px);
         }
-
+        
         .contact-links a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px);
         }
-
         /* Footer */
-
+        
         .footer {
             background: #facc15;
             color: #1f2937;
@@ -337,134 +331,119 @@
             padding: 15px;
             font-size: 0.9em;
         }
-
-    /* ------------------------------------------- */
-/* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
-/* ------------------------------------------- */
-
-/* 1. ផ្លាស់ប្តូរចំណុចចាប់ផ្ដើម Media Query ពី 768px ទៅ 480px វិញ */
-/* នេះមានន័យថា រាល់ការកំណត់ទំហំធំៗ (Laptop/Desktop) នឹងនៅតែប្រើដដែល
-   រហូតទាល់តែអេក្រង់តូចជាង 480px (ទូរស័ព្ទតូចៗបំផុត) ទើបវាប្តូរទៅជា Mobile View ។
-   ចំណុចនេះជួយឲ្យទូរស័ព្ទទំនើបៗ (iPhone Plus, Android Large) បង្ហាញដូច Laptop។
-*/
-@media (max-width: 480px) { 
-
-    /* HOME SECTION: Adjust text size and padding */
-    .home h1 {
-        font-size: 2.2em;
-    }
-
-    .home h3 {
-        font-size: 1em;
-    }
-
-    .home p {
-        font-size: 0.95em;
-        padding: 0 15px; 
-    }
-
-    /* MAIN BUTTONS: ត្រូវតែកែប្រែ flex-direction ឡើងវិញនៅត្រឹម 480px*/
-    .btns {
-        flex-direction: column; /* តម្រៀបបញ្ឈរវិញសម្រាប់ទូរស័ព្ទតូច */
-        gap: 10px;
-    }
-
-    .btns a {
-        padding: 10px 25px;
-        font-size: 0.9em;
-        width: 80%; 
-        max-width: 300px;
-    }
-    
-    /* SOCIAL LINKS: Ensure small buttons wrap neatly */
-    .social {
-        gap: 8px;
-        padding: 0 10px;
-    }
-
-    .social a {
-        padding: 8px 10px;
-        font-size: 0.8em;
-        text-align: center;
-        flex-grow: 1; 
-    }
-
-    /* CV SECTIONS: Adjust container size and padding */
-    .cv-part {
-        margin: 30px 15px;
-        padding: 30px 25px;
-        min-height: auto; 
-    }
-
-    .cv-part h2 {
-        font-size: 1.8em;
-        margin-bottom: 20px;
-        gap: 10px;
-    }
-
-    /* LANGUAGE BARS: Ensure alignment is maintained */
-    .language-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .language-item strong {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .skill-bar {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-/* 2. បន្ថែម Media Query ថ្មីសម្រាប់ Tablet/Large Phone (768px - 481px) */
-/* ការកំណត់នេះនឹងអនុញ្ញាតឲ្យប៊ូតុងតម្រៀបជួរដេក (Laptop Style) ដូចដែលអ្នកចង់បាន */
-@media (min-width: 481px) and (max-width: 768px) {
-    /* រាល់ធាតុទាំងអស់នឹងប្រើការកំណត់ដើម (Laptop/Desktop) */
-
-    /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង និង social links */
-    .btns {
-        flex-direction: row; /* បង្ហាញតាមជួរដេក (Laptop View) */
-        gap: 15px;
-        padding: 0 10px;
-    }
-    
-    .btns a {
-        /* កែទំហំដើម្បីកុំឲ្យធំពេក */
-        padding: 10px 25px;
-        font-size: 0.9em;
-        max-width: 250px;
-    }
-    
-    .social {
-        gap: 10px;
-        padding: 0 10px;
-        flex-wrap: wrap; 
-    }
-    
-    .social a {
-        font-size: 0.8em;
-    }
-
-    .cv-part {
-        /* គម្លាតតូចជាង Desktop បន្តិច */
-        margin: 30px auto;
-        padding: 30px;
-        max-width: 750px; 
-    }
-}
-    
+        /* ------------------------------------------- */
+        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
+        /* ------------------------------------------- */
+        
+        @media (max-width: 480px) {
+            /* HOME SECTION: Adjust text size and padding */
+            .home h1 {
+                font-size: 2.2em;
+            }
+            .home h3 {
+                font-size: 1em;
+            }
+            .home p {
+                font-size: 0.95em;
+                padding: 0 15px;
+            }
+            /* MAIN BUTTONS: ត្រូវតែកែប្រែ flex-direction ឡើងវិញនៅត្រឹម 480px*/
+            .btns {
+                flex-direction: column;
+                /* តម្រៀបបញ្ឈរវិញសម្រាប់ទូរស័ព្ទតូច */
+                gap: 10px;
+            }
+            .btns a {
+                padding: 10px 25px;
+                font-size: 0.9em;
+                width: 80%;
+                max-width: 300px;
+            }
+            /* SOCIAL LINKS: Ensure small buttons wrap neatly */
+            .social {
+                gap: 8px;
+                padding: 0 10px;
+            }
+            .social a {
+                padding: 8px 10px;
+                font-size: 0.8em;
+                text-align: center;
+                flex-grow: 1;
+            }
+            /* CV SECTIONS: Adjust container size and padding */
+            .cv-part {
+                margin: 30px 15px;
+                padding: 30px 25px;
+                min-height: auto;
+            }
+            .cv-part h2 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+                gap: 10px;
+            }
+            /* LANGUAGE BARS: Ensure alignment is maintained */
+            .language-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .language-item strong {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .skill-bar {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        /* 2. Media Query ថ្មីសម្រាប់ Tablet/Large Phone (481px - 768px) */
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង (Buttons) */
+            .btns {
+                /* 🌟 កែសម្រួលចំណុចនេះ 🌟 */
+                flex-direction: row;
+                /* បង្ហាញតាមជួរដេក (Laptop View) */
+                flex-wrap: nowrap;
+                /* មិន​ឲ្យ​ប៊ូតុង​ចុះ​បន្ទាត់​ទេ (តម្រូវ​ឲ្យ​នៅ​បន្ទាត់​តែមួយ) */
+                gap: 8px;
+                /* កាត់បន្ថយគម្លាតបន្តិច */
+                padding: 0 10px;
+            }
+            .btns a {
+                /* កែទំហំដើម្បីកុំឲ្យធំពេក */
+                padding: 8px 15px;
+                /* កាត់បន្ថយ padding */
+                font-size: 0.85em;
+                /* កាត់បន្ថយទំហំអក្សរ */
+                max-width: none;
+                /* អនុញ្ញាតឲ្យទទឹង​ត្រូវ​បាន​កំណត់​ដោយ flex-grow */
+                flex-grow: 1;
+                /* ឲ្យ​ប៊ូតុង​ទាំង 3 ចែកចាយ​ទទឹង​ស្មើគ្នា */
+            }
+            /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
+            .social {
+                gap: 10px;
+                padding: 0 10px;
+                flex-wrap: wrap;
+            }
+            .social a {
+                font-size: 0.8em;
+            }
+            .cv-part {
+                margin: 30px auto;
+                padding: 30px;
+                max-width: 750px;
+            }
+        }
     </style>
-    
+
 </head>
 
 <body>
 
     <section class="home" id="home">
 
-        <img src="Profile2.jpg" alt="SUOS THEANSOU"> 
+        <img src="Profile2.jpg" alt="SUOS THEANSOU">
         <h1>SUOS THEANSOU</h1>
         <h3>IT Supporter | Network Maintenance</h3>
         <p>
@@ -472,15 +451,15 @@
         </p>
         <div class="btns">
             <a href="#cv"><i class="fas fa-file-alt"></i> View My Portfolio</a>
-            
+
             <a href="https://drive.google.com/file/d/13BWN6sKz4tNxuOgMEhSvEdv4UdZ4QdZ1/view?usp=drive_link" target="_blank"><i class="fas fa-download"></i> Download CV</a>
-            
-            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a> 
+
+            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a>
         </div>
 
         <div class="social">
             <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
-            
+
             <a href="https://www.facebook.com/profile.php?id=61559033744548" target="_blank"><i class="fas fa-users"></i> Facebook Page</a>
             <a href="https://www.facebook.com/theansou.suos" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
             <a href="https://www.tiktok.com/@s.theansou?lang=en" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
@@ -612,7 +591,7 @@
         <h2><i class="fas fa-phone-alt"></i> Get In Touch</h2>
         <div class="contact-links">
             <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
-            
+
             <a href="tel:+85570605799"> Call: +855 70 605 799</a>
             <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
             <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
