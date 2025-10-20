@@ -10,20 +10,21 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: #222;
             background: #f2f4f8;
         }
+
         /* SECTION 1 - HOME (Full Glass Effect) */
-        
         .home {
             height: 100vh;
             /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
@@ -37,8 +38,8 @@
             text-align: center;
             z-index: 1;
         }
+
         /* Full-page liquid glass effect (::before) */
-        
         .home::before {
             content: '';
             position: absolute;
@@ -51,11 +52,10 @@
             -webkit-backdrop-filter: blur(15px);
             z-index: -1;
         }
-        /* 🌟 កូដដែលបានកែសម្រួលសម្រាប់ទំហំ Profile និង Margin Top/Bottom 🌟 */
-        
+
+        /* Profile Image */
         .home img {
             width: 150px;
-            /* កាត់បន្ថយទំហំពី 180px មក 150px */
             height: 150px;
             border-radius: 50%;
             border: 3px solid #fff;
@@ -65,9 +65,8 @@
             position: relative;
             z-index: 2;
             margin-top: 5vh;
-            /* ទម្លាក់ Profile ចុះក្រោមបន្តិច */
         }
-        
+
         .home h1 {
             font-size: 2.8em;
             font-weight: 700;
@@ -76,7 +75,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .home h3 {
             font-size: 1.2em;
             color: #e0e0e0;
@@ -84,7 +83,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .home p {
             margin-top: 15px;
             font-size: 1.05em;
@@ -93,7 +92,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .btns {
             margin-top: 25px;
             display: flex;
@@ -114,16 +113,17 @@
             transition: 0.3s;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 8px;
         }
-        
+
         .btns a:hover {
             background: #e0a800;
             color: #1f2937;
             transform: translateY(-2px);
         }
-        
+
         .social {
             margin-top: 35px;
             display: flex;
@@ -133,7 +133,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .social a {
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
@@ -149,26 +149,27 @@
             gap: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .social a i {
             font-size: 1.1em;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
-        
+
         .social a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
+
         /* NEW CV SECTION STYLING (Part-by-Part Pop-up) */
-        
+
         #cv {
             background: #f2f4f8;
             padding-top: 30px;
             padding-bottom: 30px;
         }
-        
+
         .cv-part {
             max-width: 900px;
             min-height: 250px;
@@ -179,7 +180,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        
+
         .cv-part h2 {
             font-size: 2.2em;
             color: #1f2937;
@@ -191,60 +192,62 @@
             padding-bottom: 5px;
             gap: 15px;
         }
-        
+
         .cv-part h2 i {
             font-size: 1.1em;
             color: #1f2937;
         }
-        /* 🌟 SCROLL ANIMATION CSS 🌟 */
         
+        /* SCROLL ANIMATION CSS */
         .hidden {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        
+
         .show {
             opacity: 1;
             transform: translateY(0);
         }
-        /* General content styling */
         
+        /* General content styling */
+
         p {
             line-height: 1.7;
             margin-bottom: 15px;
         }
-        
+
         ul {
             list-style: none;
             padding-left: 0;
         }
-        
+
         ul li::before {
             content: "▶ ";
             color: #facc15;
             font-weight: bold;
             margin-right: 5px;
         }
-        
+
         .cv-part ul li {
             margin-bottom: 10px;
             font-size: 0.95em;
         }
+
         /* Language Skill bars */
-        
+
         .language-item {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .language-item strong {
             width: 150px;
             flex-shrink: 0;
             font-weight: 600;
         }
-        
+
         .skill-bar {
             flex-grow: 1;
             height: 10px;
@@ -253,14 +256,15 @@
             overflow: hidden;
             margin-left: 10px;
         }
-        
+
         .skill-level {
             height: 100%;
             background: #facc15;
             border-radius: 5px;
         }
+
         /* Work and Education styling */
-        
+
         .work-details,
         .education-details {
             margin-bottom: 30px;
@@ -269,7 +273,7 @@
             background: #f9fafb;
             border-radius: 5px;
         }
-        
+
         .work-details p strong,
         .education-details p strong {
             display: block;
@@ -277,36 +281,40 @@
             font-size: 1.1em;
             margin-bottom: 5px;
         }
-        
+
         .work-details ul {
             list-style-type: disc;
             padding-left: 20px;
             margin-top: 10px;
         }
-        
+
         .work-details ul li::before {
             content: none;
         }
+
         /* SECTION 3 - CONTACT */
-        
+
         .contact-section {
             background: #1f2937;
             text-align: center;
             padding: 60px 20px;
         }
-        
+
         .contact-section h2 {
             font-size: 2em;
             color: #ffffff;
             margin-bottom: 20px;
         }
-        
+
         .contact-section h2 i {
             color: #facc15;
         }
-        /* 🌟 កូដដែលបានកែសម្រួលសម្រាប់ Contact Links (Alignment) 🌟 */
         
-        .contact-links a {
+        /* Styling សម្រាប់ Contact Links (Buttons) */
+        .contact-links {
+            margin-bottom: 20px; 
+        }
+        .contact-links a { 
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
@@ -314,36 +322,49 @@
             border-radius: 25px;
             margin: 10px;
             display: inline-flex;
-            /* កែពី inline-block ទៅ inline-flex */
             justify-content: center;
-            /* ដាក់អក្សរចំកណ្តាលផ្ដេក */
             align-items: center;
-            /* ដាក់អក្សរចំកណ្តាលបញ្ឈរ */
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5px);
+            gap: 8px;
+            cursor: pointer; 
         }
-        
+
         .contact-links a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px);
         }
+
+        /* CSS ថ្មីសម្រាប់ Address ធម្មតា (នៅខាងក្រោមប៊ូតុង) */
+        .contact-location {
+            color: #ffffff;
+            font-size: 1em;
+            line-height: 1.5;
+            padding: 0 10px;
+            margin-top: 15px; 
+        }
+
+
         /* Footer */
-        
+
         .footer {
             background: #facc15;
             color: #1f2937;
             text-align: center;
             padding: 15px;
             font-size: 0.9em;
+            font-weight: 600; /* 🌟 កែសម្រួល៖ ធ្វើឲ្យអក្សរដិត 🌟 */
         }
+
         /* ------------------------------------------- */
-        /* 🌟 MEDIA QUERIES FOR MOBILE RESPONSIVENESS 🌟 */
+        /* MEDIA QUERIES FOR MOBILE RESPONSIVENESS */
         /* ------------------------------------------- */
+
         /* 1. កែសម្រួលសម្រាប់ទូរស័ព្ទតូចបំផុត (max-width: 480px) */
-        
         @media (max-width: 480px) {
+            
             /* HOME SECTION: Adjust text size and padding */
             .home h1 {
                 font-size: 2.2em;
@@ -355,49 +376,52 @@
                 font-size: 0.95em;
                 padding: 0 15px;
             }
-            /* 🌟 កែសម្រួលសំខាន់សម្រាប់ MAIN BUTTONS (តម្រៀបជួរដេក) 🌟 */
+            
+            /* MAIN BUTTONS (តម្រៀបជួរដេក) */
             .btns {
                 flex-direction: row;
-                /* ផ្លាស់ប្តូរពី column ទៅ row វិញ */
                 flex-wrap: wrap;
-                /* អនុញ្ញាតឲ្យប៊ូតុងចុះបន្ទាត់បើវាមិនអាចនៅជាមួយគ្នាបាន */
                 gap: 8px;
-                /* កាត់បន្ថយគម្លាត */
                 padding: 0 10px;
                 align-items: center;
             }
             .btns a {
                 padding: 8px 10px;
-                /* កាត់បន្ថយ padding ដើម្បីឲ្យសមក្នុងជួរ */
                 font-size: 0.8em;
-                /* កាត់បន្ថយទំហំអក្សរ */
                 width: auto;
-                /* ឲ្យទទឹង​វាស់​តាម​ខ្លឹមសារ */
                 max-width: none;
                 flex-grow: 1;
-                /* ឲ្យ​ប៊ូតុង​ព្យាយាម​ចែក​ទទឹង​ស្មើគ្នា */
             }
+
             /* SOCIAL LINKS: Ensure small buttons wrap neatly */
             .social {
                 gap: 8px;
                 padding: 0 10px;
             }
-            /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបបញ្ឈរ) 🌟 */
+
+            /* CONTACT LINKS (តម្រៀបបញ្ឈរ) */
             .contact-links {
                 display: flex;
                 flex-direction: column;
-                /* តម្រៀបបញ្ឈរសម្រាប់ទូរស័ព្ទតូច */
                 align-items: center;
                 gap: 8px;
+                margin-bottom: 10px;
             }
             .contact-links a {
                 padding: 10px 20px;
                 font-size: 0.9em;
                 width: 85%;
-                /* ទទឹងកាន់តែធំល្មម */
                 max-width: 300px;
                 margin: 0;
             }
+            /* Address សម្រាប់ Mobile */
+            .contact-location {
+                padding: 0 20px;
+                font-size: 0.9em;
+                word-wrap: break-word; 
+                margin-top: 10px;
+            }
+            
             /* CV SECTIONS: Adjust container size and padding */
             .cv-part {
                 margin: 30px 15px;
@@ -423,52 +447,45 @@
                 width: 100%;
             }
         }
+
         /* 2. Media Query សម្រាប់ Tablet/Large Phone (481px - 768px) */
-        
         @media (min-width: 481px) and (max-width: 768px) {
-            /* ធាតុសំខាន់ដែលត្រូវធានាគឺប៊ូតុង (Buttons) */
+            
+            /* MAIN BUTTONS */
             .btns {
                 flex-direction: row;
-                /* បង្ហាញតាមជួរដេក (Laptop View) */
                 flex-wrap: nowrap;
-                /* មិន​ឲ្យ​ប៊ូតុង​ចុះ​បន្ទាត់​ទេ (តម្រូវ​ឲ្យ​នៅ​បន្ទាត់​តែមួយ) */
                 gap: 8px;
-                /* កាត់បន្ថយគម្លាតបន្តិច */
                 padding: 0 10px;
             }
             .btns a {
-                /* កែទំហំដើម្បីកុំឲ្យធំពេក */
                 padding: 8px 15px;
-                /* កាត់បន្ថយ padding */
                 font-size: 0.85em;
-                /* កាត់បន្ថយទំហំអក្សរ */
                 max-width: none;
-                /* អនុញ្ញាតឲ្យទទឹង​ត្រូវ​បាន​កំណត់​ដោយ flex-grow */
                 flex-grow: 1;
-                /* ឲ្យ​ប៊ូតុង​ទាំង 3 ចែកចាយ​ទទឹង​ស្មើគ្នា */
             }
-            /* 🌟 កូដ​សម្រាប់​កែសម្រួល CONTACT LINKS (តម្រៀបពីរជួរ) 🌟 */
+
+            /* CONTACT LINKS (តម្រៀបពីរជួរ) */
             .contact-links {
                 display: flex;
-                /* ប្រើ flex ដើម្បីគ្រប់គ្រងប៊ូតុង */
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 10px;
-                /* គម្លាតរវាងប៊ូតុង */
             }
             .contact-links a {
                 padding: 8px 15px;
-                /* កាត់បន្ថយ padding */
                 font-size: 0.85em;
-                /* កាត់បន្ថយទំហំអក្សរ */
                 margin: 0;
-                /* លុប margin ចាស់ចោល */
                 flex-grow: 1;
-                /* ឲ្យប៊ូតុងចែកគ្នាស្មើៗគ្នា */
                 max-width: 45%;
-                /* កំណត់ទទឹងអតិបរមាដើម្បីឲ្យវានៅពីរជួរបាន */
             }
-            /* Social Links (រក្សា​ការ​កំណត់​ដើម​ដែល​ល្អ​រួច​ហើយ) */
+            /* Address សម្រាប់ Tablet */
+            .contact-location {
+                font-size: 0.95em;
+                padding: 0 20px;
+            }
+
+            /* Social Links */
             .social {
                 gap: 10px;
                 padding: 0 10px;
@@ -490,7 +507,7 @@
 
     <section class="home" id="home">
 
-        <img src="Profile2.jpg" alt="SUOS THEANSOU">
+        <img src="Profile2.jpg" alt="SUOS THEANSOU"> 
         <h1>SUOS THEANSOU</h1>
         <h3>IT Supporter | Network Maintenance</h3>
         <p>
@@ -498,15 +515,15 @@
         </p>
         <div class="btns">
             <a href="#cv"><i class="fas fa-file-alt"></i> View My Portfolio</a>
-
+            
             <a href="https://drive.google.com/file/d/13BWN6sKz4tNxuOgMEhSvEdv4UdZ4QdZ1/view?usp=drive_link" target="_blank"><i class="fas fa-download"></i> Download CV</a>
-
-            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a>
+            
+            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a> 
         </div>
 
         <div class="social">
             <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
-
+            
             <a href="https://www.facebook.com/profile.php?id=61559033744548" target="_blank"><i class="fas fa-users"></i> Facebook Page</a>
             <a href="https://www.facebook.com/theansou.suos" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
             <a href="https://www.tiktok.com/@s.theansou?lang=en" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
@@ -636,13 +653,17 @@
 
     <section class="contact-section" id="contact">
         <h2><i class="fas fa-phone-alt"></i> Get In Touch</h2>
+        
         <div class="contact-links">
             <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
-
             <a href="tel:+85570605799"> Call: +855 70 605 799</a>
             <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
             <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
         </div>
+        
+        <p class="contact-location">
+            Location: No.283G, Street N/A, Toul Thanan, Sangkat Toul Sangke 2, Khan Russeykeo, Phnom Penh, Cambodia
+        </p>
     </section>
 
     <div class="footer">
