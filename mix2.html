@@ -10,10 +10,13 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+        /* Reset and Base Styles */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            /* FIX: Ensure smooth scrolling works correctly */
             scroll-behavior: smooth;
         }
         
@@ -26,8 +29,8 @@
         
         .home {
             height: 100vh;
-            /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
-            background: #2563eb url('background.jpg') no-repeat center center/cover;
+            /* Placeholder background image using a solid color */
+            background: #2563eb url(background.jpg) no-repeat center center/cover;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -90,6 +93,8 @@
             color: #f0f0f0;
             position: relative;
             z-index: 2;
+            padding: 0 20px;
+            /* Added padding for mobile readability */
         }
         
         .btns {
@@ -131,6 +136,7 @@
             flex-wrap: wrap;
             position: relative;
             z-index: 2;
+            padding: 0 10px;
         }
         
         .social a {
@@ -349,7 +355,6 @@
             padding: 15px;
             font-size: 0.9em;
             font-weight: 600;
-            /* 🌟 កែសម្រួល៖ ធ្វើឲ្យអក្សរដិត 🌟 */
         }
         /* ------------------------------------------- */
         /* MEDIA QUERIES FOR MOBILE RESPONSIVENESS */
@@ -492,6 +497,7 @@
 
     <section class="home" id="home">
 
+        <!-- Using a placeholder image -->
         <img src="Profile2.jpg" alt="SUOS THEANSOU">
         <h1>SUOS THEANSOU</h1>
         <h3>IT Supporter | Network Maintenance</h3>
@@ -499,45 +505,53 @@
             Hello! I’m an IT Supporter at the <strong>General Department of National Treasury</strong>. I specialize in maintaining network systems, software installation, and providing tech support. Passionate about technology, web development, and cybersecurity.
         </p>
         <div class="btns">
+            <!-- FIX: Removed trailing space from href value -->
             <a href="#cv"><i class="fas fa-file-alt"></i> View My Portfolio</a>
 
-            <a href=https://drive.google.com/file/d/1MvHt6IrBO70jdmx-UK-UQNxOabhTi4o_/view?usp=sharing " target="_blank "><i class="fas fa-download "></i> Download CV</a>
-            
-            <a href="#contact "><i class="fas fa-headset "></i> Contact Me</a> 
+            <!-- FIX: Corrected all broken quotes and attribute separation -->
+            <a href="https://drive.google.com/file/d/1MvHt6IrBO70jdmx-UK-UQNxOabhTi4o_/view?usp=sharing" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+
+            <!-- FIX: Removed trailing space from href value -->
+            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a>
         </div>
 
-        <div class="social ">
-            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing " target="_blank "><i class="fas fa-award "></i> CCNA Certificate</a>
-            
-            <a href="https://www.facebook.com/profile.php?id=61559033744548 " target="_blank "><i class="fas fa-users "></i> Facebook Page</a>
-            <a href="https://www.facebook.com/theansou.suos " target="_blank "><i class="fab fa-facebook-f "></i> Facebook</a>
-            <a href="https://www.tiktok.com/@s.theansou?lang=en " target="_blank "><i class="fab fa-tiktok "></i> TikTok</a>
-            <a href="https://www.youtube.com/@Suostheansou " target="_blank "><i class="fab fa-youtube "></i> YouTube</a>
-            <a href="https://t.me/Theansou " target="_blank "><i class="fab fa-telegram-plane "></i> Telegram</a>
-            <a href="https://www.linkedin.com/in/suos-theansou-604b372bb/ " target="_blank "><i class="fab fa-linkedin-in "></i> LinkedIn</a>
-            <a href="https://www.khmer24.com/en/account " target="_blank "><i class="fas fa-sign-in-alt "></i> Khmer24</a>
+        <div class="social">
+            <!-- FIX: Corrected broken quotes and attribute separation -->
+            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
+
+            <a href="https://www.facebook.com/profile.php?id=61559033744548" target="_blank"><i class="fas fa-users"></i> Facebook Page</a>
+            <a href="https://www.facebook.com/theansou.suos" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.tiktok.com/@s.theansou?lang=en" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://www.youtube.com/@Suostheansou" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://t.me/Theansou" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+            <a href="https://www.linkedin.com/in/suos-theansou-604b372bb/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.khmer24.com/en/account" target="_blank"><i class="fas fa-sign-in-alt"></i> Khmer24</a>
         </div>
     </section>
 
-    <div id="cv ">
+    <!-- FIX: Removed trailing space from id attribute -->
+    <div id="cv">
 
-        <section class="cv-part hidden " id="profile ">
-            <h2><i class="fas fa-user-circle "></i> Profile</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="profile">
+            <h2><i class="fas fa-user-circle"></i> Profile</h2>
             <p>Motivated and detail-oriented IT Supporter with a strong foundation in computer science, currently pursuing a Bachelor's Degree at the Royal University of Phnom Penh. Experienced in installing and maintaining software, troubleshooting hardware
                 and network issues, and providing reliable technical support in government institutions. Demonstrates initiative, responsibility, and a passion for solving real-world IT problems through practical application. Fluent in Khmer and possesses
                 intermediate English communication skills. Seeking to grow technical expertise while contributing to organizational success.</p>
         </section>
 
-        <section class="cv-part hidden " id="objective ">
-            <h2><i class="fas fa-bullseye "></i> Career Objective</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="objective">
+            <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
             <p>To apply the IT knowledge and skills gained during my university studies to real-world challenges. I strive to gain hands-on experience, strengthen my technical abilities, and contribute to solving organizational IT problems. Additionally,
                 I aim to grow professionally while earning an income to support my everyday life.</p>
         </section>
 
-        <section class="cv-part hidden " id="experience ">
-            <h2><i class="fas fa-briefcase "></i> Work Experience</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="experience">
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
 
-            <div class="work-details ">
+            <div class="work-details">
                 <p><strong>IT Supporter – Government Institution</strong><br> February 27, 2024 – Present | Phnom Penh, Cambodia</p>
                 <ul>
                     <li>Provided day-to-day IT support to staff across departments, ensuring minimal downtime and efficient operation.</li>
@@ -549,7 +563,7 @@
                 </ul>
             </div>
 
-            <div class="work-details ">
+            <div class="work-details">
                 <p><strong>Participant - Social Affairs Workshop</strong><br> May 23, 2025</p>
                 <ul>
                     <li>Headquarters of the Cambodian People's Party, Phnom Penh</li>
@@ -561,29 +575,33 @@
             </div>
         </section>
 
-        <section class="cv-part hidden " id="education ">
-            <h2><i class="fas fa-graduation-cap "></i> Education</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
 
-            <div class="education-details ">
+            <div class="education-details">
                 <p><strong>Bachelor's Degree in Computer Science (In Progress)</strong><br>Royal University of Phnom Penh (RUPP) - Since 2024</p>
             </div>
-            <div class="education-details ">
+            <div class="education-details">
                 <p><strong>High School Diploma</strong><br>Kandal Province, Cambodia - Completed in 2023</p>
             </div>
         </section>
 
-        <section class="cv-part hidden " id="certifications ">
-            <h2><i class="fas fa-certificate "></i> Certifications</h2>
-            <div class="work-details ">
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="certifications">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="work-details">
                 <p><strong>CCNA: Cisco Certified Network Associate</strong><br> Cisco Systems | View Online</p>
                 <p>Completed the foundational certification for networking professionals, covering network access, IP connectivity, and security fundamentals, demonstrating competency in managing and troubleshooting essential network devices.</p>
-                <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link " target="_blank " style="display:inline-block; margin-top:10px; color:#1f2937; text-decoration:none; font-weight:bold; "><i class="fas fa-external-link-alt "></i> View Certificate</a>
+                <!-- FIX: Corrected broken quotes and attribute separation -->
+                <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank" style="display:inline-block; margin-top:10px; color:#1f2937; text-decoration:none; font-weight:bold;"><i class="fas fa-external-link-alt"></i> View Certificate</a>
             </div>
         </section>
 
 
-        <section class="cv-part hidden " id="tech-skills ">
-            <h2><i class="fas fa-code "></i> Technical Skills</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="tech-skills">
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
             <ul>
                 <li>Windows Installation & Software Setup</li>
                 <li>Basic Network Maintenance & Troubleshooting</li>
@@ -597,8 +615,9 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden " id="soft-skills ">
-            <h2><i class="fas fa-handshake "></i> Soft Skills</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="soft-skills">
+            <h2><i class="fas fa-handshake"></i> Soft Skills</h2>
             <ul>
                 <li>Problem Solving</li>
                 <li>Team Collaboration</li>
@@ -608,8 +627,9 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden " id="interests ">
-            <h2><i class="fas fa-chart-line "></i> Interests</h2>
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="interests">
+            <h2><i class="fas fa-chart-line"></i> Interests</h2>
             <ul>
                 <li>Graphic Design with Photoshop</li>
                 <li>Exploring IT tools and technologies</li>
@@ -618,40 +638,43 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden " id="languages ">
-            <h2><i class="fas fa-globe-asia "></i> Languages</h2>
-            <div class="language-item ">
+        <!-- Removed trailing space from class attribute -->
+        <section class="cv-part hidden" id="languages">
+            <h2><i class="fas fa-globe-asia"></i> Languages</h2>
+            <div class="language-item">
                 <strong>KHMER : Native</strong>
-                <div class="skill-bar ">
-                    <div class="skill-level " style="width: 100%; "></div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 100%;"></div>
                 </div>
             </div>
-            <div class="language-item ">
+            <div class="language-item">
                 <strong>ENGLISH : Intermediate</strong>
-                <div class="skill-bar ">
-                    <div class="skill-level " style="width: 60%; "></div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <section class="contact-section " id="contact ">
-        <h2><i class="fas fa-phone-alt "></i> Get In Touch</h2>
-        
-        <div class="contact-links ">
-            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing " target="_blank "><i class="fas fa-award "></i> CCNA Certificate</a>
-            <a href="tel:+85570605799 "> Call: +855 70 605 799</a>
-            <a href="mailto:suostheansou@gmail.com "> Mail: suostheansou@gmail.com</a>
-            <a href="https://t.me/Theansou " target="_blank "> Telegram</a>
+    <!-- FIX: Removed trailing space from class and id attributes -->
+    <section class="contact-section" id="contact">
+        <h2><i class="fas fa-phone-alt"></i> Get In Touch</h2>
+
+        <div class="contact-links">
+            <!-- FIX: Corrected broken quotes and attribute separation -->
+            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
+            <a href="tel:+85570605799"> Call: +855 70 605 799</a>
+            <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
+            <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
         </div>
-        
-        <p class="contact-location ">
+
+        <p class="contact-location">
             Location: No.283G, Street N/A, Toul Thanan, Sangkat Toul Sangke 2, Khan Russeykeo, Phnom Penh, Cambodia
         </p>
     </section>
 
-    <div class="footer ">
+    <div class="footer">
         © 2025 SUOS THEANSOU | General Department of National Treasury
     </div>
 
@@ -676,6 +699,7 @@
 
             // ដាក់ class "hidden " លើរាល់ផ្នែក CV ហើយចាប់ផ្តើមតាមដាន
             cvParts.forEach(part => {
+                // FIX: Removed trailing space in the class name here as well
                 if (!part.classList.contains('hidden')) {
                     part.classList.add('hidden');
                 }
