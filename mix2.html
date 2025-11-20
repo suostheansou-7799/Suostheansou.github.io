@@ -10,21 +10,20 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             color: #222;
             background: #f2f4f8;
         }
-
         /* SECTION 1 - HOME (Full Glass Effect) */
+        
         .home {
             height: 100vh;
             /* ⚠️ ត្រូវជំនួស 'background.jpg' ដោយរូបភាពផ្ទៃខាងក្រោយរបស់អ្នក ⚠️ */
@@ -38,8 +37,8 @@
             text-align: center;
             z-index: 1;
         }
-
         /* Full-page liquid glass effect (::before) */
+        
         .home::before {
             content: '';
             position: absolute;
@@ -52,8 +51,8 @@
             -webkit-backdrop-filter: blur(15px);
             z-index: -1;
         }
-
         /* Profile Image */
+        
         .home img {
             width: 150px;
             height: 150px;
@@ -66,7 +65,7 @@
             z-index: 2;
             margin-top: 5vh;
         }
-
+        
         .home h1 {
             font-size: 2.8em;
             font-weight: 700;
@@ -75,7 +74,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .home h3 {
             font-size: 1.2em;
             color: #e0e0e0;
@@ -83,7 +82,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .home p {
             margin-top: 15px;
             font-size: 1.05em;
@@ -92,7 +91,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .btns {
             margin-top: 25px;
             display: flex;
@@ -117,13 +116,13 @@
             align-items: center;
             gap: 8px;
         }
-
+        
         .btns a:hover {
             background: #e0a800;
             color: #1f2937;
             transform: translateY(-2px);
         }
-
+        
         .social {
             margin-top: 35px;
             display: flex;
@@ -133,7 +132,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .social a {
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
@@ -149,27 +148,26 @@
             gap: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
+        
         .social a i {
             font-size: 1.1em;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
-
+        
         .social a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-
         /* NEW CV SECTION STYLING (Part-by-Part Pop-up) */
-
+        
         #cv {
             background: #f2f4f8;
             padding-top: 30px;
             padding-bottom: 30px;
         }
-
+        
         .cv-part {
             max-width: 900px;
             min-height: 250px;
@@ -180,7 +178,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-
+        
         .cv-part h2 {
             font-size: 2.2em;
             color: #1f2937;
@@ -192,62 +190,60 @@
             padding-bottom: 5px;
             gap: 15px;
         }
-
+        
         .cv-part h2 i {
             font-size: 1.1em;
             color: #1f2937;
         }
-        
         /* SCROLL ANIMATION CSS */
+        
         .hidden {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-
+        
         .show {
             opacity: 1;
             transform: translateY(0);
         }
-        
         /* General content styling */
-
+        
         p {
             line-height: 1.7;
             margin-bottom: 15px;
         }
-
+        
         ul {
             list-style: none;
             padding-left: 0;
         }
-
+        
         ul li::before {
             content: "▶ ";
             color: #facc15;
             font-weight: bold;
             margin-right: 5px;
         }
-
+        
         .cv-part ul li {
             margin-bottom: 10px;
             font-size: 0.95em;
         }
-
         /* Language Skill bars */
-
+        
         .language-item {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-
+        
         .language-item strong {
             width: 150px;
             flex-shrink: 0;
             font-weight: 600;
         }
-
+        
         .skill-bar {
             flex-grow: 1;
             height: 10px;
@@ -256,15 +252,14 @@
             overflow: hidden;
             margin-left: 10px;
         }
-
+        
         .skill-level {
             height: 100%;
             background: #facc15;
             border-radius: 5px;
         }
-
         /* Work and Education styling */
-
+        
         .work-details,
         .education-details {
             margin-bottom: 30px;
@@ -273,7 +268,7 @@
             background: #f9fafb;
             border-radius: 5px;
         }
-
+        
         .work-details p strong,
         .education-details p strong {
             display: block;
@@ -281,40 +276,40 @@
             font-size: 1.1em;
             margin-bottom: 5px;
         }
-
+        
         .work-details ul {
             list-style-type: disc;
             padding-left: 20px;
             margin-top: 10px;
         }
-
+        
         .work-details ul li::before {
             content: none;
         }
-
         /* SECTION 3 - CONTACT */
-
+        
         .contact-section {
             background: #1f2937;
             text-align: center;
             padding: 60px 20px;
         }
-
+        
         .contact-section h2 {
             font-size: 2em;
             color: #ffffff;
             margin-bottom: 20px;
         }
-
+        
         .contact-section h2 i {
             color: #facc15;
         }
-        
         /* Styling សម្រាប់ Contact Links (Buttons) */
+        
         .contact-links {
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
         }
-        .contact-links a { 
+        
+        .contact-links a {
             text-decoration: none;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
@@ -328,43 +323,40 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5px);
             gap: 8px;
-            cursor: pointer; 
+            cursor: pointer;
         }
-
+        
         .contact-links a:hover {
             background: rgba(255, 255, 255, 0.4);
             color: #1f2937;
             transform: translateY(-2px);
         }
-
         /* CSS ថ្មីសម្រាប់ Address ធម្មតា (នៅខាងក្រោមប៊ូតុង) */
+        
         .contact-location {
             color: #ffffff;
             font-size: 1em;
             line-height: 1.5;
             padding: 0 10px;
-            margin-top: 15px; 
+            margin-top: 15px;
         }
-
-
         /* Footer */
-
+        
         .footer {
             background: #facc15;
             color: #1f2937;
             text-align: center;
             padding: 15px;
             font-size: 0.9em;
-            font-weight: 600; /* 🌟 កែសម្រួល៖ ធ្វើឲ្យអក្សរដិត 🌟 */
+            font-weight: 600;
+            /* 🌟 កែសម្រួល៖ ធ្វើឲ្យអក្សរដិត 🌟 */
         }
-
         /* ------------------------------------------- */
         /* MEDIA QUERIES FOR MOBILE RESPONSIVENESS */
         /* ------------------------------------------- */
-
         /* 1. កែសម្រួលសម្រាប់ទូរស័ព្ទតូចបំផុត (max-width: 480px) */
+        
         @media (max-width: 480px) {
-            
             /* HOME SECTION: Adjust text size and padding */
             .home h1 {
                 font-size: 2.2em;
@@ -376,7 +368,6 @@
                 font-size: 0.95em;
                 padding: 0 15px;
             }
-            
             /* MAIN BUTTONS (តម្រៀបជួរដេក) */
             .btns {
                 flex-direction: row;
@@ -392,13 +383,11 @@
                 max-width: none;
                 flex-grow: 1;
             }
-
             /* SOCIAL LINKS: Ensure small buttons wrap neatly */
             .social {
                 gap: 8px;
                 padding: 0 10px;
             }
-
             /* CONTACT LINKS (តម្រៀបបញ្ឈរ) */
             .contact-links {
                 display: flex;
@@ -418,10 +407,9 @@
             .contact-location {
                 padding: 0 20px;
                 font-size: 0.9em;
-                word-wrap: break-word; 
+                word-wrap: break-word;
                 margin-top: 10px;
             }
-            
             /* CV SECTIONS: Adjust container size and padding */
             .cv-part {
                 margin: 30px 15px;
@@ -447,10 +435,9 @@
                 width: 100%;
             }
         }
-
         /* 2. Media Query សម្រាប់ Tablet/Large Phone (481px - 768px) */
+        
         @media (min-width: 481px) and (max-width: 768px) {
-            
             /* MAIN BUTTONS */
             .btns {
                 flex-direction: row;
@@ -464,7 +451,6 @@
                 max-width: none;
                 flex-grow: 1;
             }
-
             /* CONTACT LINKS (តម្រៀបពីរជួរ) */
             .contact-links {
                 display: flex;
@@ -484,7 +470,6 @@
                 font-size: 0.95em;
                 padding: 0 20px;
             }
-
             /* Social Links */
             .social {
                 gap: 10px;
@@ -507,7 +492,7 @@
 
     <section class="home" id="home">
 
-        <img src="Profile2.jpg" alt="SUOS THEANSOU"> 
+        <img src="Profile2.jpg" alt="SUOS THEANSOU">
         <h1>SUOS THEANSOU</h1>
         <h3>IT Supporter | Network Maintenance</h3>
         <p>
@@ -515,44 +500,44 @@
         </p>
         <div class="btns">
             <a href="#cv"><i class="fas fa-file-alt"></i> View My Portfolio</a>
+
+            <a href=https://drive.google.com/file/d/1MvHt6IrBO70jdmx-UK-UQNxOabhTi4o_/view?usp=sharing " target="_blank "><i class="fas fa-download "></i> Download CV</a>
             
-            <a href="https://drive.google.com/file/d/13BWN6sKz4tNxuOgMEhSvEdv4UdZ4QdZ1/view?usp=drive_link" target="_blank"><i class="fas fa-download"></i> Download CV</a>
-            
-            <a href="#contact"><i class="fas fa-headset"></i> Contact Me</a> 
+            <a href="#contact "><i class="fas fa-headset "></i> Contact Me</a> 
         </div>
 
-        <div class="social">
-            <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
+        <div class="social ">
+            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing " target="_blank "><i class="fas fa-award "></i> CCNA Certificate</a>
             
-            <a href="https://www.facebook.com/profile.php?id=61559033744548" target="_blank"><i class="fas fa-users"></i> Facebook Page</a>
-            <a href="https://www.facebook.com/theansou.suos" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a href="https://www.tiktok.com/@s.theansou?lang=en" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-            <a href="https://www.youtube.com/@Suostheansou" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="https://t.me/Theansou" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
-            <a href="https://www.linkedin.com/in/suos-theansou-604b372bb/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-            <a href="https://www.khmer24.com/en/account" target="_blank"><i class="fas fa-sign-in-alt"></i> Khmer24</a>
+            <a href="https://www.facebook.com/profile.php?id=61559033744548 " target="_blank "><i class="fas fa-users "></i> Facebook Page</a>
+            <a href="https://www.facebook.com/theansou.suos " target="_blank "><i class="fab fa-facebook-f "></i> Facebook</a>
+            <a href="https://www.tiktok.com/@s.theansou?lang=en " target="_blank "><i class="fab fa-tiktok "></i> TikTok</a>
+            <a href="https://www.youtube.com/@Suostheansou " target="_blank "><i class="fab fa-youtube "></i> YouTube</a>
+            <a href="https://t.me/Theansou " target="_blank "><i class="fab fa-telegram-plane "></i> Telegram</a>
+            <a href="https://www.linkedin.com/in/suos-theansou-604b372bb/ " target="_blank "><i class="fab fa-linkedin-in "></i> LinkedIn</a>
+            <a href="https://www.khmer24.com/en/account " target="_blank "><i class="fas fa-sign-in-alt "></i> Khmer24</a>
         </div>
     </section>
 
-    <div id="cv">
+    <div id="cv ">
 
-        <section class="cv-part hidden" id="profile">
-            <h2><i class="fas fa-user-circle"></i> Profile</h2>
+        <section class="cv-part hidden " id="profile ">
+            <h2><i class="fas fa-user-circle "></i> Profile</h2>
             <p>Motivated and detail-oriented IT Supporter with a strong foundation in computer science, currently pursuing a Bachelor's Degree at the Royal University of Phnom Penh. Experienced in installing and maintaining software, troubleshooting hardware
                 and network issues, and providing reliable technical support in government institutions. Demonstrates initiative, responsibility, and a passion for solving real-world IT problems through practical application. Fluent in Khmer and possesses
                 intermediate English communication skills. Seeking to grow technical expertise while contributing to organizational success.</p>
         </section>
 
-        <section class="cv-part hidden" id="objective">
-            <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+        <section class="cv-part hidden " id="objective ">
+            <h2><i class="fas fa-bullseye "></i> Career Objective</h2>
             <p>To apply the IT knowledge and skills gained during my university studies to real-world challenges. I strive to gain hands-on experience, strengthen my technical abilities, and contribute to solving organizational IT problems. Additionally,
                 I aim to grow professionally while earning an income to support my everyday life.</p>
         </section>
 
-        <section class="cv-part hidden" id="experience">
-            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <section class="cv-part hidden " id="experience ">
+            <h2><i class="fas fa-briefcase "></i> Work Experience</h2>
 
-            <div class="work-details">
+            <div class="work-details ">
                 <p><strong>IT Supporter – Government Institution</strong><br> February 27, 2024 – Present | Phnom Penh, Cambodia</p>
                 <ul>
                     <li>Provided day-to-day IT support to staff across departments, ensuring minimal downtime and efficient operation.</li>
@@ -564,7 +549,7 @@
                 </ul>
             </div>
 
-            <div class="work-details">
+            <div class="work-details ">
                 <p><strong>Participant - Social Affairs Workshop</strong><br> May 23, 2025</p>
                 <ul>
                     <li>Headquarters of the Cambodian People's Party, Phnom Penh</li>
@@ -576,29 +561,29 @@
             </div>
         </section>
 
-        <section class="cv-part hidden" id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <section class="cv-part hidden " id="education ">
+            <h2><i class="fas fa-graduation-cap "></i> Education</h2>
 
-            <div class="education-details">
+            <div class="education-details ">
                 <p><strong>Bachelor's Degree in Computer Science (In Progress)</strong><br>Royal University of Phnom Penh (RUPP) - Since 2024</p>
             </div>
-            <div class="education-details">
+            <div class="education-details ">
                 <p><strong>High School Diploma</strong><br>Kandal Province, Cambodia - Completed in 2023</p>
             </div>
         </section>
 
-        <section class="cv-part hidden" id="certifications">
-            <h2><i class="fas fa-certificate"></i> Certifications</h2>
-            <div class="work-details">
+        <section class="cv-part hidden " id="certifications ">
+            <h2><i class="fas fa-certificate "></i> Certifications</h2>
+            <div class="work-details ">
                 <p><strong>CCNA: Cisco Certified Network Associate</strong><br> Cisco Systems | View Online</p>
                 <p>Completed the foundational certification for networking professionals, covering network access, IP connectivity, and security fundamentals, demonstrating competency in managing and troubleshooting essential network devices.</p>
-                <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank" style="display:inline-block; margin-top:10px; color:#1f2937; text-decoration:none; font-weight:bold;"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+                <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link " target="_blank " style="display:inline-block; margin-top:10px; color:#1f2937; text-decoration:none; font-weight:bold; "><i class="fas fa-external-link-alt "></i> View Certificate</a>
             </div>
         </section>
 
 
-        <section class="cv-part hidden" id="tech-skills">
-            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+        <section class="cv-part hidden " id="tech-skills ">
+            <h2><i class="fas fa-code "></i> Technical Skills</h2>
             <ul>
                 <li>Windows Installation & Software Setup</li>
                 <li>Basic Network Maintenance & Troubleshooting</li>
@@ -612,8 +597,8 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden" id="soft-skills">
-            <h2><i class="fas fa-handshake"></i> Soft Skills</h2>
+        <section class="cv-part hidden " id="soft-skills ">
+            <h2><i class="fas fa-handshake "></i> Soft Skills</h2>
             <ul>
                 <li>Problem Solving</li>
                 <li>Team Collaboration</li>
@@ -623,8 +608,8 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden" id="interests">
-            <h2><i class="fas fa-chart-line"></i> Interests</h2>
+        <section class="cv-part hidden " id="interests ">
+            <h2><i class="fas fa-chart-line "></i> Interests</h2>
             <ul>
                 <li>Graphic Design with Photoshop</li>
                 <li>Exploring IT tools and technologies</li>
@@ -633,40 +618,40 @@
             </ul>
         </section>
 
-        <section class="cv-part hidden" id="languages">
-            <h2><i class="fas fa-globe-asia"></i> Languages</h2>
-            <div class="language-item">
+        <section class="cv-part hidden " id="languages ">
+            <h2><i class="fas fa-globe-asia "></i> Languages</h2>
+            <div class="language-item ">
                 <strong>KHMER : Native</strong>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                <div class="skill-bar ">
+                    <div class="skill-level " style="width: 100%; "></div>
                 </div>
             </div>
-            <div class="language-item">
+            <div class="language-item ">
                 <strong>ENGLISH : Intermediate</strong>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
+                <div class="skill-bar ">
+                    <div class="skill-level " style="width: 60%; "></div>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <section class="contact-section" id="contact">
-        <h2><i class="fas fa-phone-alt"></i> Get In Touch</h2>
+    <section class="contact-section " id="contact ">
+        <h2><i class="fas fa-phone-alt "></i> Get In Touch</h2>
         
-        <div class="contact-links">
-            <a href="https://drive.google.com/file/d/1HklBsCqNTpwwLC5JMWLdM8LE7qc7OavP/view?usp=drive_link" target="_blank"><i class="fas fa-award"></i> CCNA Certificate</a>
-            <a href="tel:+85570605799"> Call: +855 70 605 799</a>
-            <a href="mailto:suostheansou@gmail.com"> Mail: suostheansou@gmail.com</a>
-            <a href="https://t.me/Theansou" target="_blank"> Telegram</a>
+        <div class="contact-links ">
+            <a href="https://drive.google.com/file/d/1vzlYuOLHGGHI-vza6FTOC8bOrNzaFvoS/view?usp=sharing " target="_blank "><i class="fas fa-award "></i> CCNA Certificate</a>
+            <a href="tel:+85570605799 "> Call: +855 70 605 799</a>
+            <a href="mailto:suostheansou@gmail.com "> Mail: suostheansou@gmail.com</a>
+            <a href="https://t.me/Theansou " target="_blank "> Telegram</a>
         </div>
         
-        <p class="contact-location">
+        <p class="contact-location ">
             Location: No.283G, Street N/A, Toul Thanan, Sangkat Toul Sangke 2, Khan Russeykeo, Phnom Penh, Cambodia
         </p>
     </section>
 
-    <div class="footer">
+    <div class="footer ">
         © 2025 SUOS THEANSOU | General Department of National Treasury
     </div>
 
@@ -689,7 +674,7 @@
                 threshold: 0.2 // ចាប់ផ្តើម Animation នៅពេល 20% នៃ Element ចូល
             });
 
-            // ដាក់ class "hidden" លើរាល់ផ្នែក CV ហើយចាប់ផ្តើមតាមដាន
+            // ដាក់ class "hidden " លើរាល់ផ្នែក CV ហើយចាប់ផ្តើមតាមដាន
             cvParts.forEach(part => {
                 if (!part.classList.contains('hidden')) {
                     part.classList.add('hidden');
